@@ -9,14 +9,21 @@ let studentRecords = [
 
 let arr=[];
 studentRecords.forEach((studentName)=>{
-    arr.push(studentName.name)
+    arr.push(studentName.name.toUpperCase())
 })  
 console.log(arr)
 
-
 // method2
+let newarr= studentRecords.map((stuName)=>{stuName.name.toUpperCase()})
+console.log(newarr);
 
-
+//method3
+let result=[]
+for(let i=0;i < studentRecords.length;i++){
+    let obj=studentRecords[i];
+    result.push((obj.name).toUpperCase())
+}
+console.log(result)
 // 2."Question 2: Suppose we have the same dataset as above but this time we want to get the details of students who scored more than 50 marks.
 // [{name: 'John', id: 123, marks : 98 },{name: 'Wick', id: 115, marks : 75 }]"
 let array=[]
@@ -25,8 +32,8 @@ for(i in studentRecords){
         array.push(studentRecords[i]);
     } 
 }
-
 console.log(array)
+
 
 // Question 3: Retrieve the details of students who scored more than 50 marks and have id greater than 120.
 let ar=[]
@@ -76,6 +83,7 @@ for( i in studentRecords){
 console.log(a);
 
 //8. Create 6 objects , each object will have name, class, roll no as properties. Store these objects in an array of objects. 
+let studentarr=[]
 function records(name,classs,rollnum) {
     this.firstName = name;
     this.class = classs;
@@ -88,8 +96,15 @@ const record4 = new records("singh", 4 , 5);
 const record5 = new records("sweety", 8 , 20);
 const record6 = new records("suman", 5 , 18);
 
-let objarr = [record1,record2,record3,record4,record5,record6]
-console.log(objarr);
+studentarr.push(record1)
+studentarr.push(record2)
+studentarr.push(record3)
+studentarr.push(record4)
+studentarr.push(record5)
+studentarr.push(record6)
+console.log(studentarr);
+// let objarr = [record1,record2,record3,record4,record5,record6]
+// console.log(objarr);
 
 
 
